@@ -14,6 +14,9 @@ type AuthDelegateOptions struct {
 	// Port on which to listen for requests
 	Port int `json:"port"`
 
+	// Address we should listen on
+	Listen string `json:"listen"`
+
 	// Path to the server's SSL certificate
 	SslCert string `json:"ssl_cert"`
 

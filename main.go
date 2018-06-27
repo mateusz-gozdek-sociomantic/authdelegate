@@ -37,7 +37,7 @@ func main() {
 		printErrorAndExit("parsing", configPath, err)
 	}
 
-	address := ":" + strconv.Itoa(opts.Port)
+	address := opts.Listen  + ":" + strconv.Itoa(opts.Port)
 	handler := NewAuthDelegate(opts)
 	server := &http.Server{Addr: address, Handler: handler}
 	fmt.Printf("port %d: awaiting auth delegation requests\n", opts.Port)
